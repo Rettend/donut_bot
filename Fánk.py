@@ -271,7 +271,7 @@ async def say(ctx, *, words):
 
 @bot.event
 async def on_message(message):
-    if message.content.startswith('r-help'):
+    if message.content.startswith('!help'):
         emb = discord.Embed(title='MY COMMANDS:', description="Hey, check out my commands!", colour=0x3498db)
         emb.add_field(name='--------------------', value=':small_blue_diamond: r-bot\n'
                             ':white_small_square: r-game {game}\n'
