@@ -266,12 +266,21 @@ async def nick(ctx, *, name):
     await bot.say(embed=em)
 
 @bot.command(pass_context=True)
-async def say(ctx, *, words):
+async def mond(ctx, *, words):
     await bot.say(f"**{words}**")
 
 @bot.event
 async def on_message(message):
-    if message.content.startswith('!info kocsik'):
+    if message.content.startswith('!infó fegyók'):
+        em = discord.Embed(title="INFO", description="Roblox fegyói:", colour=0x3498db)
+        em.add_field(name="Pistol", value="-A kis rendőrállomáson\n-A nagy rendőrállomáson\n-A vulkán rablóbázison\n-A kis rablóállomáson", inline=False)
+        em.add_field(name="Shotgun", value="-A kis rendőrállomáson\n-A nagy rendőrállomáson\n-A vulkán rablóbázison\n-A kis rablóállomáson", inline=False)
+        em.add_field(name="AK-47", value="-A Kisvárosi boltban", inline=False)
+        em.add_field(name="M4A1", value="-SWAT kell hozzá", inline=False)
+        timer = time.strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime())
+        em.set_footer(text=timer)
+        await bot.send_message(message.channel, embed=em)
+    if message.content.startswith('!infó kocsik'):
         em = discord.Embed(title="INFO", description="Roblox autói:", colour=0x3498db)
         em.add_field(name="Camaro", value="$0", inline=False)
         em.add_field(name="Helicopter", value="$0", inline=False)
@@ -301,14 +310,14 @@ async def on_message(message):
     if message.content.startswith('!help'):
         emb = discord.Embed(title='MY COMMANDS:', description="Hey, check out my commands!", colour=0x3498db)
         emb.add_field(name='--------------------', value=':small_blue_diamond: r-bot\n'
-                            ':white_small_square: r-game {game}\n'
-                            ':small_blue_diamond: r-say {words}\n'
-                            ':white_small_square: r-ping\n'
-                            ':small_blue_diamond: r-sub {number1} {number2}\n'
-                            ':white_small_square: r-mul {number1} {number2}\n'
-                            ':small_blue_diamond: r-div {number1} {number2}\n'
-                            ':white_small_square: r-exp {number1} {number2}\n'
-                            ':white_small_square: r-help', inline=True)
+                            ':white_small_square: !game {játék}\n'
+                            ':small_blue_diamond: !mond {szavak}\n'
+                            ':white_small_square: !ping\n'
+                            ':small_blue_diamond: !sub {number1} {number2}\n'
+                            ':white_small_square: !mul {number1} {number2}\n'
+                            ':small_blue_diamond: !div {number1} {number2}\n'
+                            ':white_small_square: !exp {number1} {number2}\n'
+                            ':white_small_square: !help', inline=True)
         emb.set_thumbnail(url='https://cdn.discordapp.com/emojis/385152309090451467.png?v=1')
         await bot.send_message(message.channel, embed=emb)
     await bot.process_commands(message) #IMPORTANT
