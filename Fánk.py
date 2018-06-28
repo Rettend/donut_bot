@@ -271,6 +271,32 @@ async def say(ctx, *, words):
 
 @bot.event
 async def on_message(message):
+    if message.content.startswith('!info kocsik'):
+        em = discord.Embed(title="INFO", description="", colour=0x3498db)
+        em.add_field(name="Camaro", value="$0", inline=False)
+        em.add_field(name="Helicopter", value="$0", inline=False)
+        em.add_field(name="SWAT Van", value="$R", inline=False)
+        em.add_field(name="PickupTruck", value="$9000", inline=False)
+        em.add_field(name="Model3", value="$16000", inline=False)
+        em.add_field(name="MiniCooper", value="$25000", inline=False)
+        em.add_field(name="DirtBike", value="$35000", inline=False)
+        em.add_field(name="SUV", value="$40000", inline=False)
+        em.add_field(name="DuneBuggy", value="$45000", inline=False)
+        em.add_field(name="Mustang", value="$50000", inline=False)
+        em.add_field(name="Classic Car", value="$50000", inline=False)
+        em.add_field(name="Quad", value="$50000", inline=False)
+        em.add_field(name="Porsche", value="$70000", inline=False)
+        em.add_field(name="Lamborghini", value="$100000", inline=False)
+        em.add_field(name="Ferrari", value="$200000", inline=False)
+        em.add_field(name="McLaren", value="$300000", inline=False)
+        em.add_field(name="UFO", value="$500000", inline=False)
+        em.add_field(name="Bugatti", value="$500000", inline=False)
+        em.add_field(name="Monster", value="$1000000", inline=False)
+        em.add_field(name="BlackHawk", value="$1000000", inline=False)
+        em.add_field(name="VoltBike", value="$1000000", inline=False)
+        timer = time.strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime())
+        em.set_footer(text=timer)
+        await bot.send_message(message.channel, embed=em)
     if message.content.startswith('!help'):
         emb = discord.Embed(title='MY COMMANDS:', description="Hey, check out my commands!", colour=0x3498db)
         emb.add_field(name='--------------------', value=':small_blue_diamond: r-bot\n'
