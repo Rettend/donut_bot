@@ -271,7 +271,7 @@ async def mond(ctx, *, words):
 
 @bot.event
 async def on_message(message):
-    if message.content.upper().startswith('!infó fegyók Pistol'):
+    if message.content.upper().startswith('!INFÓ Pistol'):
         em = discord.Embed(title="INFO", description="Pistol:", colour=0x3498db)
         em.add_field(name="Előfordulás:", value="-A kis rendőrállomáson\n-A nagy rendőrállomáson\n-A vulkán rablóbázison\n-A kis rablóállomáson", inline=False)
         em.add_field(name="Ismertető:", value="Nagy sebzésű fegyver, egy játékos életének 16%-át veszi le egy lövéssel, 8 lövedék van egy tárban és a tárat max. 4 másodperc alatt üríti ki. Nagy látótávolsága miatt gyakran használják járművek megállítására", inline=False)
@@ -279,7 +279,7 @@ async def on_message(message):
         timer = time.strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime())
         em.set_footer(text=timer)
         await bot.send_message(message.channel, embed=em)
-    if message.content.upper().startswith('!infó fegyók Shotgun'):
+    if message.content.upper().startswith('!INFÓ Shotgun'):
         em = discord.Embed(title="INFO", description="Shotgun:", colour=0x3498db)
         em.add_field(name="Előfordulás:", value="-A kis rendőrállomáson\n-A nagy rendőrállomáson\n-A vulkán rablóbázison\n-A kis rablóállomáson", inline=False)
         em.add_field(name="Ismertető:", value="Kis látótávolságával a közeli csatákhoz a legjobb fegyver, sebzése nem kiszámítható de akár 3 lövéssel is megölhet egy játékost. 4 lövedék van egy tárban.", inline=False)
@@ -287,7 +287,7 @@ async def on_message(message):
         timer = time.strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime())
         em.set_footer(text=timer)
         await bot.send_message(message.channel, embed=em)
-    if message.content.upper().startswith('!infó fegyók AK-47'):
+    if message.content.upper().startswith('!INFÓ AK-47'):
         em = discord.Embed(title="INFO", description="Shotgun:", colour=0x3498db)
         em.add_field(name="Előfordulás:", value="-A Kisvárosi boltban", inline=False)
         em.add_field(name="Ismertető:", value="A pisztolynál kisebb látótávval rendelkező fegyver, nagyon kicsi a sebzése, egy lövés a játékos életének 2%-át veszi le. Főleg járművek gyors megállítására használják", inline=False)
@@ -295,7 +295,7 @@ async def on_message(message):
         timer = time.strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime())
         em.set_footer(text=timer)
         await bot.send_message(message.channel, embed=em)
-    if message.content.upper().startswith('!infó fegyók M4A1'):
+    if message.content.upper().startswith('!INFÓ M4A1'):
         em = discord.Embed(title="INFO", description="M4A1:", colour=0x3498db)
         em.add_field(name="Előfordulás:", value="-SWAT-osok számára elérhető a kis- és nagyrendőrállomáson", inline=False)
         em.add_field(name="Ismertető:", value="A legjobb fegyver, nagy látótávolsága van. 20 lövedék van egy tárban és 1 tárral képes megolni egy játékost. Teljesen automata fegyver.", inline=False)
